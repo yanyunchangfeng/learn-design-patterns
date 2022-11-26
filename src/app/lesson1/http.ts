@@ -1,11 +1,10 @@
-export { }
-let http = require('http')
+export {};
+let http = require("http");
 // http.createServer(function (req, res){
-//     res.end('hello') 
+//     res.end('hello')
 // }) // 语法糖写法
 let server = http.createServer();
-server.on('request', function(req,res){
-    res.end('hellos')
-})
-http.listen(3000)
-
+server.on("request", function (req: any, res: any) {
+  res.end("hellos");
+});
+http.listen(3000);
