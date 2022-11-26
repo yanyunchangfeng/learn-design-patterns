@@ -11,6 +11,7 @@
 
 1.  [观察者模式](src/app/lesson1/index.ts) [EventEmitter](src/app/lesson1/EventEmitter.ts) [promise](src/app/lesson1/promise.ts) [callbacks](src/app/lesson1/callbacks.ts) [fs.createReadStream](src/app/lesson1/createReadStream.ts) [http.createServer](src/app/lesson1/http.ts)
 2.  [发布订阅模式](src/app/lesson2/index.ts)
+3.  [门面模式](src/app/lesson3/index.ts)
 
 ## 系列项目
 
