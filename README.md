@@ -10,6 +10,7 @@
 ## 设计模式
 1.  [类图](src/app/classs1/index.ts)![类图实例](src/app/classs1/ClassDiagram.jpg)
 2.  [时序图/活动图](src/app/sequence2/index.ts)![时序图实例](src/app/sequence2/SequenceDiagram.jpg) ![活动图实例](src/app/sequence2/ActivityDiagram.jpg)
+3. [设计原则-抽象](src/app/pod3/abstract.ts)| [封装](src/app/pod3/encapsulation.ts)| [继承](src/app/pod3/inherit.ts)| [多态](src/app/pod3/polymorphic.ts)| 
 2.  [观察者模式](src/app/lesson1/index.ts) [EventEmitter](src/app/lesson1/EventEmitter.ts) | [promise](src/app/lesson1/promise.ts) | [callbacks](src/app/lesson1/callbacks.ts) |  [fs.createReadStream](src/app/lesson1/createReadStream.ts) | [http.createServer](src/app/lesson1/http.ts)    
 3.  [发布订阅模式](src/app/lesson2/index.ts)
 4.  [门面模式](src/app/facade10/index.ts) | [computer](src/app/facade10/computer.ts) | [overload](src/app/facade10/overload.ts) | [zip](src/app/facade10/zip.ts) | [buffer](src/app/facade10/buffer.ts) | [createElement](src/app/facade10/createElement.ts) | [createStore](src/app/facade10/createStore.ts)
