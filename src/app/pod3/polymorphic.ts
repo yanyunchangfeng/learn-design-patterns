@@ -31,3 +31,4 @@ function talk(animal: Animal) {
 talk(new Dog());
 talk(new Cat());
 export {};
+// 多态是一个功能，它的实现是要靠继承的，多态是要靠继承来实现，没有继承就没有多态
