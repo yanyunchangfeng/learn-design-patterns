@@ -6,3 +6,7 @@ import "src/app/class1";
 import "src/app/pod3/abstract";
 import "src/app/pod3/openclose1";
 import "src/app/pod3/sub";
+import "src/app/pod3/depencyInversion";
+import "src/app/pod3/interfaceSegregation";
+import "src/app/pod3/11";
+import "src/app/pod3/lod";
