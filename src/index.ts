@@ -10,3 +10,4 @@ import "src/app/pod3/depencyInversion";
 import "src/app/pod3/interfaceSegregation";
 import "src/app/pod3/11";
 import "src/app/pod3/lod";
+import "src/app/factory4/abstract";
