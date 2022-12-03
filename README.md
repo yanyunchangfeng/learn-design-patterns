@@ -13,7 +13,9 @@
 3. [面向对象-抽象](src/app/pod3/abstract.ts) | [封装](src/app/pod3/encapsulation.ts) | [继承](src/app/pod3/inherit.ts) | [多态](src/app/pod3/polymorphic.ts) 
 4. [设计原则](src/app/pod3/designPrinciple.ts) | [开闭原则-原始](src/app/pod3/openclose.ts) | [开闭原则-案例1](src/app/pod3/openclose1.ts) | [开闭原则-案例2](src/app/pod3/openclose2.ts) | | [里氏替换原则-案例1](src/app/pod3/sub.ts) | [里氏替换原则-案例2](src/app/pod3/sub1.ts) | [设计原则-依赖倒置原则案例1](src/app/pod3/depencyInversion.ts) | [设计原则-依赖倒置原则案例2](src/app/pod3/depencyInversion.ts) |  [设计原则-接口隔离原则](src/app/pod3/interfaceSegregation.ts) | [合成复用原则](src/app/pod3/11.ts)   
 5. [工厂模式](src/app/factory4/index.ts) |  [简单工厂](src/app/factory4/simple.ts) | [Jquery简单工厂](src/app/factory4/simple.ts) |  [工厂方法](src/app/factory4/method.ts)  | [抽象工厂模式](src/app/factory4/abstract.ts)
-6. [观察者模式](src/app/lesson1/index.ts) [EventEmitter](src/app/lesson1/EventEmitter.ts) | [promise](src/app/lesson1/promise.ts) | [callbacks](src/app/lesson1/callbacks.ts) |  [fs.createReadStream](src/app/lesson1/createReadStream.ts) | [http.createServer](src/app/lesson1/http.ts)    
+6. [单例模式](src/app/single5/index.ts) | [es5实现单例](src/app/single5/2.ts) | [透明单例](src/app/single5/3.ts)  | [单例与构建过程分离](src/app/single5/4.ts) | [单例封装变化](src/app/single5/5.ts)
+7. [适配器模式](src/app/adapter5/index.ts) | [适配器例子axios](src/app/adapter5/axios.ts) | [适配器例子toAxiosAdaptor](src/app/adapter5/toAxiosAdaptor.ts) 
+10. [观察者模式](src/app/lesson1/index.ts) [EventEmitter](src/app/lesson1/EventEmitter.ts) | [promise](src/app/lesson1/promise.ts) | [callbacks](src/app/lesson1/callbacks.ts) |  [fs.createReadStream](src/app/lesson1/createReadStream.ts) | [http.createServer](src/app/lesson1/http.ts)    
 3.  [发布订阅模式](src/app/lesson2/index.ts)
 4.  [门面模式](src/app/facade10/index.ts) | [computer](src/app/facade10/computer.ts) | [overload](src/app/facade10/overload.ts) | [zip](src/app/facade10/zip.ts) | [buffer](src/app/facade10/buffer.ts) | [createElement](src/app/facade10/createElement.ts) | [createStore](src/app/facade10/createStore.ts)
 
