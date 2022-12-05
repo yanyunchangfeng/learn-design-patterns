@@ -17,7 +17,7 @@ class WangSong implements GirlFriend {
 }
 class BeiWoGirl implements GirlFriend {
   age: number = 22;
-  height: number = 160;
+  height: number = 165;
   cook() {
     console.log("炒土豆丝");
   }

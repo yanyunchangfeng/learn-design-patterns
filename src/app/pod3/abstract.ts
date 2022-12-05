@@ -5,7 +5,7 @@
 //        面向对象设计(OOD) Object Oriented Design
 //        面向对象编程(OOP) Object Oriented Programming
 
-// 1.1 抽象
+// 1.1 抽象(Abstraction)
 //    抽象主要是隐藏方法的实现，让调用者只关心有哪些功能而不是关心功能的实现
 //    抽象可以提高代码的可扩展性和维护性，修改实现不需要改变定义，可以减少代码的改动范围
 
