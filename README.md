@@ -16,6 +16,7 @@
 6. [单例模式](src/app/single5/index.ts) | [es5实现单例](src/app/single5/2.ts) | [透明单例](src/app/single5/3.ts)  | [单例与构建过程分离](src/app/single5/4.ts) | [单例封装变化](src/app/single5/5.ts)
 7. [适配器模式](src/app/adapter6/index.ts) | [适配器例子axios](src/app/adapter6/axios.ts) | [适配器例子toAxiosAdaptor](src/app/adapter6/toAxiosAdaptor.ts) 
 8. [装饰器模式](src/app/decorator7/index.ts) |  [装饰类](src/app/decorator7/2.ts)  |  [装饰函数](src/app/decorator7/index.html) 
+9. [代理模式](src/app/proxy8/index.ts) | [事件委托代理](src/app/proxy8/2.html)  | [虚拟代理图片预加载](src/app/proxy8/3.html) | [虚拟代理图片懒加载](src/app/proxy8/3.html)  | [缓存代理](src/app/proxy8/5.ts) | [防抖节流代理](src/app/proxy8/6.html)  | [正向/反向/跨域/代理](src/app/proxy8/7.ts)  | [跨域代理服务端](src/app/proxy8/7.9999.ts) 
 10. [观察者模式](src/app/lesson1/index.ts) [EventEmitter](src/app/lesson1/EventEmitter.ts) | [promise](src/app/lesson1/promise.ts) | [callbacks](src/app/lesson1/callbacks.ts) |  [fs.createReadStream](src/app/lesson1/createReadStream.ts) | [http.createServer](src/app/lesson1/http.ts)    
 3.  [发布订阅模式](src/app/lesson2/index.ts)
 4.  [门面模式](src/app/facade10/index.ts) | [computer](src/app/facade10/computer.ts) | [overload](src/app/facade10/overload.ts) | [zip](src/app/facade10/zip.ts) | [buffer](src/app/facade10/buffer.ts) | [createElement](src/app/facade10/createElement.ts) | [createStore](src/app/facade10/createStore.ts)
