@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <select id="users"></select>
+      <button>注册</button>
+    </form>
+    <script>
+      // 从服务端读到数据，然后显示在select框里
+      let treeData = [
+        {
+          name: "浙江",
+          key: "shandong",
+          children: [
+            { name: "杭州", key: "hangzhou" },
+            { name: "绍兴", key: "shaoxin" },
+          ],
+        },
+        {
+          name: "湖北",
+          key: "shandong",
+          children: [
+            { name: "襄阳", key: "xiangyang" },
+            { name: "武汉", key: "wuhan" },
+          ],
+        },
+      ];
+      let users = document.getElementById("users");
+      function flattenAdaptor(treeData, array) {
+        treeData.forEach((item) => {
+          if (item.children) {
+            flattenAdaptor(item.children, array);
+          }
+          array.push({ name: item.name, key: item.key });
+        });
+      }
+      let addressArray = [];
+      flattenAdaptor(treeData, addressArray);
+      let html = addressArray
+        .map((item) => `<option value="${item.key}">${item.name}</option>`)
+        .join("");
+      users.innerHTML = html;
+    </script>
+  </body>
+</html>
