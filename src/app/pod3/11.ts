@@ -16,12 +16,12 @@ class Product {
 }
 
 class Class {
-  public students!: Array<Student>;
+  public students!: Array<Student>; //聚合 学生聚合在一起形成班级
 }
 class Book {}
 class Pen {}
 class Student {
-  // 如果是另外一个类是当前类的方法和属性或者 是局部变量就是依赖关系
+  // 如果说另外一个类是当前类的方法和属性或者说是局部变量就是依赖关系
   read(book: Book) {
     let pen = new Pen();
   }
@@ -29,7 +29,7 @@ class Student {
 
 class Heart {}
 class Person {
-  public heart!: Heart;
+  public heart!: Heart; // 组合,生命周期是一致的
 }
 // 从弱到强 依赖>关联>聚合>组合
 
