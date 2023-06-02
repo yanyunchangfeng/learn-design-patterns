@@ -10,7 +10,7 @@
 ## 设计模式
 1.  [类图](src/app/class1/index.ts) 
 ![类图实例](src/app/class1/ClassDiagram.jpg)  
-2.  [时序图/活动图](src/app/sequence2/index.ts)
+2.  [时序图/活动(流程)图](src/app/sequence2/index.ts)
 ![时序图实例](src/app/sequence2/SequenceDiagram.jpg)
 ![活动图实例](src/app/sequence2/ActivityDiagram.jpg)
 3. [面向对象-抽象](src/app/pod3/abstract.ts) | [封装](src/app/pod3/encapsulation.ts) | [继承](src/app/pod3/inherit.ts) | [多态](src/app/pod3/polymorphic.ts) 
@@ -47,10 +47,7 @@
 ```    
 
 ## 社交主页
-
-1. [燕云长风知乎](https://zhihu.com/people/hbxyxuxiaodong)
-3. [燕云长风 github](https://github.com/yanyunchangfeng)
-4. [燕云长风 gitee](https://gitee.com/yanyunchangfeng)
+* [燕云长风 github](https://github.com/yanyunchangfeng)
 
 ## 开源许可证
 
