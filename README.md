@@ -11,7 +11,7 @@
 1.  [类图](src/app/class1/index.ts) 
 ![类图实例](src/app/class1/ClassDiagram.jpg)  
 2.  [时序图/活动(流程)图](src/app/sequence2/index.ts)
-![时序图实例](src/app/sequence2/SequenceDiagram.jpg)
+![时序图实例](src/app/sequence2/LoginSequenceDiagram.jpg)
 ![活动图实例](src/app/sequence2/ActivityDiagram.jpg)
 3. [面向对象-抽象](src/app/pod3/abstract.ts) | [封装](src/app/pod3/encapsulation.ts) | [继承](src/app/pod3/inherit.ts) | [多态](src/app/pod3/polymorphic.ts) 
 4. [设计原则](src/app/pod3/designPrinciple.ts) | [开闭原则-原始](src/app/pod3/openclose.ts) | [开闭原则-案例1](src/app/pod3/openclose1.ts) | [开闭原则-案例2](src/app/pod3/openclose2.ts) | [里氏替换原则-案例1](src/app/pod3/sub.ts) | [里氏替换原则-案例2](src/app/pod3/sub1.ts) | [设计原则-依赖倒置原则案例1](src/app/pod3/dependencyInversion.ts) | [设计原则-依赖倒置原则案例2](src/app/pod3/dependencyInversion1.ts) |  [设计原则-接口隔离原则](src/app/pod3/interfaceSegregation.ts) | [合成复用原则](src/app/pod3/11.ts)   
