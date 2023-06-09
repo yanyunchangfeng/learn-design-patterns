@@ -49,8 +49,9 @@ class Tenant implements ITenant {
 let agency = new Agency();
 let rich = new Tenant(agency, "大款");
 let northFloat = new Tenant(agency, "北漂");
+let landLord = new LandLord(agency);
+
 rich.order("豪宅");
 northFloat.order("单间");
-let landLord = new LandLord(agency);
 landLord.lend("豪宅", 100000, 1000000);
 landLord.lend("单间", 10, 2000);

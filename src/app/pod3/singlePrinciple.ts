@@ -8,6 +8,8 @@ export {};
 class Product {
   public name!: string;
   public price!: number;
+  // public categoryName!: string;
+  // public categoryIcon!: string;
   public category!: Category;
   // public updateProduct(prodName,prodPrice){}
   public updateName() {}

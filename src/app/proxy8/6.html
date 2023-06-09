@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #container{
-            width: 200px;
-            height: 400px;
-            border:  1px solid red;
-            overflow: auto;
-        }
-        #container .content{
-            height: 4000px;
-        }
+      #container {
+        width: 200px;
+        height: 400px;
+        border: 1px solid red;
+        overflow: auto;
+      }
+      #container .content {
+        height: 4000px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <div class="content"></div>
+      <div class="content"></div>
     </div>
     <script>
-        let container = document.getElementById('container')
-        let lastTime = Date.now()
-        function throttle(callback,interval){
-            let lastExcuteTime;
-            return function(){
-                let context = this;
-                let args = Array.from(arguments)
-                let now  = Date.now();
-                if(lastExcuteTime){
-                    if(now -lastExcuteTime>=interval){
-                        callback.apply(context,args)
-                        lastExcuteTime = now
-                    }
-                }else{
-                    callback.apply(context,args)
-                    lastExcuteTime = now
-                }
-
+      let container = document.getElementById("container");
+      let lastTime = Date.now();
+      function throttle(callback, interval) {
+        let lastExecuteTime;
+        return function () {
+          let context = this;
+          let args = Array.from(arguments);
+          let now = Date.now();
+          if (lastExecuteTime) {
+            if (now - lastExecuteTime >= interval) {
+              callback.apply(context, args);
+              lastExecuteTime = now;
             }
+          } else {
+            callback.apply(context, args);
+            lastExecuteTime = now;
+          }
+        };
+      }
+      function debounce(callback, delay) {
+        let timer;
+        return function () {
+          let context = this;
+          let args = Array.from(arguments);
+          if (timer) {
+            clearTimeout(timer);
+          }
+          timer = setTimeout(() => {
+            callback.apply(context, args);
+            timer = null;
+          }, delay);
+        };
+      }
+      const scrollEvent = (event) => {
+        let nowDate = Date.now();
+        console.log("触发了滚动事件", (nowDate - lastTime) / 1000);
+        lastTime = nowDate;
+      };
 
-        }
-        function debounce(callback,delay){
-           let timer;
-           return function(){
-            let context = this;
-            let args = Array.from(arguments)
-            if(timer){clearTimeout(timer)}
-            timer = setTimeout(()=>{
-                    callback.apply(context,args)
-                },delay)
-            }
-        }
-        const scrollEvent = (event)=>{
-            let nowDate = Date.now()
-            console.log('触发了滚动事件',(nowDate - lastTime)/1000)
-            lastTime = nowDate
-        }
-        // container.addEventListener('scroll',throttle(scrollEvent,1000))
-        container.addEventListener('scroll',debounce(scrollEvent,1000))
+      const debounce2 = (fn, debTime) => {
+        let timer = null;
+        return function (...args) {
+          if (timer) clearTimeout(timer);
+          timer = setTimeout(() => {
+            fn.apply(this, args);
+            timer = null;
+          }, debTime);
+        };
+      };
+      // container.addEventListener('scroll',throttle(scrollEvent,1000))
+      container.addEventListener("scroll", debounce2(scrollEvent, 1000));
     </script>
-</body>
+  </body>
 </html>

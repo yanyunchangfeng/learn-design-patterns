@@ -17,7 +17,7 @@
 
 abstract class Student {
   constructor(public teacher: Teacher) {}
-  // 每个观察这都有一个update方法，用来在被观察 对象更新的时候进行自我更新
+  // 每个观察者都有一个update方法，用来在被观察 对象更新的时候进行自我更新
   public abstract update(): void;
 }
 
