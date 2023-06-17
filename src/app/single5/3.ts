@@ -2,7 +2,7 @@
  * 透明单例
  * 客户端或者使用者并不需要知道要按单例使用
  */
-export {};
+export { Window };
 let Window = (function () {
   let window: Window;
   let Window = function (this: Window) {

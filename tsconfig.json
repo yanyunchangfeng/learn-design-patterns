@@ -25,6 +25,7 @@
   },
   "include": [
     "src/**/*.ts", // 两个*表示任意目录 一个*表示任意文件
-    "src/typings/**/*"
+    "src/typings/**/*",
+    "test/**/*"
   ]
 }
