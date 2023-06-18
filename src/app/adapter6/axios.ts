@@ -56,7 +56,7 @@ function getDefaultAdaptor() {
   return adaptor;
 }
 function axios(config: any): any {
-  let adaptor: any = getDefaultAdaptor();
+  let adaptor = getDefaultAdaptor();
   // 不管是浏览器端还是node端，都是传入一个config对象，返回一个promise
-  return adaptor(config);
+  return adaptor!(config);
 }

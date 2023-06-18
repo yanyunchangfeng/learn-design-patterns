@@ -225,7 +225,7 @@ module.exports = {
         },
       }
     : false,
-  stats: "errors-only", // 只在错误时输出  用于精确地控制编译过程的日志内容，在做比较细致的性能调式时非常有用
+  stats: "error-only", // 只在错误时输出  用于精确地控制编译过程的日志内容，在做比较细致的性能调式时非常有用
   plugins: [
     new webpackBar(),
     // fork 出子进程，专门用于执行类型检查 这样，既可以获得 Typescript 静态类型检查能力，又能提升整体编译速度。

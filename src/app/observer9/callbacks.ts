@@ -2,25 +2,18 @@
  * Jquery Callbacks
  */
 
-interface ICallbackFn<T> {
-  add(observer: T): void;
-  remove(observer: T): void;
-  fire(): void;
-}
-interface ICallBacks<T> {
-  (): ICallbackFn<T>;
-}
+type Observer = (...args: any[]) => void;
+
 let a1 = () => console.log(1);
 let a2 = () => console.log(2);
 let a3 = () => console.log(3);
-type Fn = typeof a1;
 
-const Callbacks: ICallBacks<Fn> = () => {
-  let observers: Fn[] = [];
-  const add = (observer: Fn) => {
+const Callbacks = () => {
+  let observers: Observer[] = [];
+  const add = <T extends Observer>(observer: T) => {
     observers.push(observer);
   };
-  const remove = (observer: Fn) => {
+  const remove = <T extends Observer>(observer: T) => {
     observers = observers.filter((item) => item !== observer);
   };
   const fire = () => {

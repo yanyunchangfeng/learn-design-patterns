@@ -3,19 +3,20 @@
  */
 
 export {};
+type Fn = (...args: any) => void;
 class Promise {
-  success: Array<Function> = [];
-  constructor(task: Function) {
+  success: Array<Fn> = [];
+  constructor(task: Fn) {
     const resolve = () => {
       this.success.forEach((success) => success());
     };
     task(resolve);
   }
-  then(success: Function) {
+  then(success: Fn) {
     this.success.push(success);
   }
 }
-let promise = new Promise((resolve: Function) => {
+let promise = new Promise((resolve: Fn) => {
   setTimeout(() => {
     resolve();
   }, 1000);

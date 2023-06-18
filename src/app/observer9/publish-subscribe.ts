@@ -3,12 +3,12 @@
 // 中介
 
 interface IAgency {
-  _topic: Record<string | number, any>;
+  _topic: Record<string, any>;
   subscribe(type: string, listener: Function): void;
   publish(type: string, ...args: any[]): void;
 }
 class Agency implements IAgency {
-  _topic = {} as Record<string | number, any>; // _events
+  _topic = {} as Record<string, any>; // _events
   subscribe(type: string, listener: Function) {
     let listeners = this._topic[type];
     if (listeners) {

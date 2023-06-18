@@ -1,13 +1,13 @@
 // array forEach
 declare global {
   interface Array<T> {
-    forEach2(callback: Function): void;
+    forEach2(callback: (current: T, index: number, arr: T[]) => void): void;
   }
 }
 
 Array.prototype.forEach2 = function (callback) {
   for (let i = 0; i < this.length; i++) {
-    callback.call(this, this[i], i, this);
+    callback(this[i], i, this);
   }
 };
 
