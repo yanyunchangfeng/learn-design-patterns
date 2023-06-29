@@ -32,3 +32,5 @@ console.log(it3.next());
 console.log(it3.next());
 console.log(it3.next());
 console.log(it3.next());
+
+export {};
