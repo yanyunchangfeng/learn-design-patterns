@@ -117,6 +117,51 @@ let list = [
     clazz: "1班",
   },
 ];
+
+const userList = [
+  {
+    name: "user1",
+    age: 18,
+    province: "四川",
+    city: "成都",
+    district: "高新区",
+  },
+  {
+    name: "user2",
+    age: 19,
+    province: "四川",
+    city: "成都",
+    district: "天府新区",
+  },
+  {
+    name: "user3",
+    age: 20,
+    province: "四川",
+    city: "南充",
+    district: "顺庆区",
+  },
+  {
+    name: "user4",
+    age: 22,
+    province: "江苏",
+    city: "南京",
+    district: "鼓楼区",
+  },
+  {
+    name: "users",
+    age: 21,
+    province: "江苏",
+    city: "南京",
+    district: "玄武区",
+  },
+  {
+    name: "user6",
+    age: 21,
+    province: "江苏",
+    city: "镇江",
+    district: "京口区",
+  },
+];
 const data2Tree = <T, U>(list: T[], condition: U[] = []) => {
   const newArr: any[] = [];
   condition = JSON.parse(JSON.stringify(condition));
@@ -142,6 +187,11 @@ const data2Tree = <T, U>(list: T[], condition: U[] = []) => {
   });
   return newArr;
 };
-const winCondition = ["college", "grade", "clazz"];
-const treeData = data2Tree(list, winCondition);
+const listCondition = ["college", "grade", "clazz"];
+const userListCondition = ["province", "city", "district"];
+const treeData = data2Tree(list, listCondition);
+const provinceData = data2Tree(userList, userListCondition);
 console.log(treeData, "treeData");
+console.log(provinceData, "provinceData");
+
+export { data2Tree, userList, list, listCondition, userListCondition };
