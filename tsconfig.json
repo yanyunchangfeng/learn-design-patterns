@@ -3,10 +3,9 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "allowJs": true,
     "module": "esnext",
     "strict": true,
-    "target": "es2020",
+    "target": "es5",
     "sourceMap": true,
     "jsx": "react",
     "lib": [
@@ -23,7 +22,7 @@
     "emitDecoratorMetadata": true
   },
   "include": [
-    "src/**/*.ts", // 两个*表示任意目录 一个*表示任意文件
+    "src/**/*", // 两个*表示任意目录 一个*表示任意文件
     "test/**/*"
   ]
 }

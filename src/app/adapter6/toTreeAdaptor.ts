@@ -78,7 +78,7 @@ const arrayToTree = (arr: any, parentId?: any) => {
     });
 };
 
-console.log(list_to_tree(entries));
+// console.log(list_to_tree(entries));
 // console.log(arrayToTree(entries));
 
 //无id情况
@@ -182,7 +182,8 @@ const data2Tree = <T, U>(list: T[], condition: U[] = []) => {
   });
   newArr.forEach((item) => {
     if (item.children.length && deep) {
-      item.children = data2Tree(item.children, condition);
+      let children = data2Tree(item.children, condition);
+      item.children = children;
     }
   });
   return newArr;
@@ -191,7 +192,7 @@ const listCondition = ["college", "grade", "clazz"];
 const userListCondition = ["province", "city", "district"];
 const treeData = data2Tree(list, listCondition);
 const provinceData = data2Tree(userList, userListCondition);
-console.log(treeData, "treeData");
-console.log(provinceData, "provinceData");
+// console.log(treeData, "treeData");
+// console.log(provinceData, "provinceData");
 
 export { data2Tree, userList, list, listCondition, userListCondition };

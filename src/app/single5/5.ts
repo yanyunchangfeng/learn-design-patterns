@@ -27,4 +27,4 @@ let createInstance = function <T extends new () => T>(Constructor: T) {
 let createWindow = createInstance(Window as any);
 let w1 = new (createWindow as any)();
 let w2 = new (createWindow as any)();
-console.log(w1 === w2);
+// console.log(w1 === w2);

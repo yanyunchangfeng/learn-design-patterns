@@ -17,4 +17,4 @@ let Window = (function () {
 })();
 let w1 = new (Window as any)();
 let w2 = new (Window as any)();
-console.log(w1 === w2);
+// console.log(w1 === w2);
