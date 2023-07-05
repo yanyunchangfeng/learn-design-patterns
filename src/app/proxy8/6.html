@@ -22,7 +22,7 @@
       <div class="content"></div>
     </div>
     <script>
-      let container = document.getElementById("container");
+      let container = document.getElementById('container');
       let lastTime = Date.now();
       function throttle(callback, interval) {
         let lastExecuteTime;
@@ -57,7 +57,7 @@
       }
       const scrollEvent = (event) => {
         let nowDate = Date.now();
-        console.log("触发了滚动事件", (nowDate - lastTime) / 1000);
+        console.log('触发了滚动事件', (nowDate - lastTime) / 1000);
         lastTime = nowDate;
       };
 
@@ -72,7 +72,7 @@
         };
       };
       // container.addEventListener('scroll',throttle(scrollEvent,1000))
-      container.addEventListener("scroll", debounce2(scrollEvent, 1000));
+      container.addEventListener('scroll', debounce2(scrollEvent, 1000));
     </script>
   </body>
 </html>

@@ -8,7 +8,7 @@ interface Window {
 }
 function Window() {}
 Window.prototype.hello = function () {
-  console.log("hello");
+  console.log('hello');
 };
 // 希望 封装变化，希望这个createInstance 可以创建任何类型的实例
 let createInstance = function <T extends new () => T>(Constructor: T) {

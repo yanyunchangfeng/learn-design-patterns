@@ -42,7 +42,7 @@ interface Star {
 class Angelababy implements Star {
   available: boolean = false;
   answerPhone(): void {
-    console.log("你好，我是Angelababy");
+    console.log('你好，我是Angelababy');
   }
 }
 class AngelababyAgent implements Star {
@@ -52,11 +52,11 @@ class AngelababyAgent implements Star {
     this.angelababy = new Angelababy();
   }
   answerPhone(): void {
-    console.log("你好，我是Angelababy的经纪人");
+    console.log('你好，我是Angelababy的经纪人');
     if (this.angelababy.available) {
       this.angelababy.answerPhone();
     } else {
-      console.log("很抱歉，Angelababy没有空！");
+      console.log('很抱歉，Angelababy没有空！');
     }
   }
 }

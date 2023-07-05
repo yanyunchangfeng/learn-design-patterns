@@ -22,10 +22,8 @@ function createIterator(array: any[]) {
   let index: number = 0;
   return {
     next() {
-      return index < array.length
-        ? { value: array[index++], done: false }
-        : { value: undefined, done: true };
-    },
+      return index < array.length ? { value: array[index++], done: false } : { value: undefined, done: true };
+    }
   };
 }
 let array = [1, 2, 3];

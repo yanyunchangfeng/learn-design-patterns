@@ -17,12 +17,12 @@ abstract class Animal {
 }
 class Dog extends Animal {
   speak() {
-    console.log("汪汪汪");
+    console.log('汪汪汪');
   }
 }
 class Cat extends Animal {
   speak() {
-    console.log("喵喵喵");
+    console.log('喵喵喵');
   }
 }
 function talk(animal: Animal) {

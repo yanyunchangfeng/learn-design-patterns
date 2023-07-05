@@ -9,7 +9,7 @@
 // 这是需要被适配的类
 class Socket {
   output() {
-    return "220v";
+    return '220v';
   }
 }
 
@@ -22,7 +22,7 @@ class PowerAdaptor extends Power {
     super();
   }
   charge(): string {
-    return this.socket.output() + "转换为24v";
+    return this.socket.output() + '转换为24v';
   }
 }
 

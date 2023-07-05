@@ -5,7 +5,7 @@ function make(array: any[]): any {
   if (array.length == 1) return new Tree(null, array[0], null);
   return new Tree(make(array[0]), array[1], make(array[2]));
 }
-let tree = make([[["D"], "B", ["E"]], "A", [["F"], "C", ["G"]]]);
+let tree = make([[['D'], 'B', ['E']], 'A', [['F'], 'C', ['G']]]);
 console.log(tree);
 // 根 左 右
 function* leftOrder(tree: any): any {

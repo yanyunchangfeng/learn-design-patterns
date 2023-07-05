@@ -9,7 +9,7 @@ namespace a {
       console.log(target);
       target.prototype.swings = swings;
       target.prototype.fly = function () {
-        console.log("我能飞");
+        console.log('我能飞');
       };
     };
   }
@@ -34,32 +34,21 @@ namespace b {
     protoName: string;
   }
   //实例属性的时候target是类的原型对象，key是属性的名字
-  function instancePropertyDecorator(
-    target: InstanceType<typeof Person>,
-    key: string
-  ) {
-    target.protoName = "我是类的原型上的属性";
-    console.log("instancePropertyDecorator", target, key);
+  function instancePropertyDecorator(target: InstanceType<typeof Person>, key: string) {
+    target.protoName = '我是类的原型上的属性';
+    console.log('instancePropertyDecorator', target, key);
   }
   //类的静态属性的时候target就是类的构造函数
   function classPropertyDecorator(target: typeof Person, key: string) {
-    console.log("classPropertyDecorator", target, key);
+    console.log('classPropertyDecorator', target, key);
   }
   //如果是实例的方法的话target就是类的原型 key方法名 descriptor属性描述符
-  function instanceMethodDecorator(
-    target: InstanceType<typeof Person>,
-    key: string,
-    descriptor: PropertyDescriptor
-  ) {
-    console.log("instanceMethodDecorators", target, key, descriptor);
+  function instanceMethodDecorator(target: InstanceType<typeof Person>, key: string, descriptor: PropertyDescriptor) {
+    console.log('instanceMethodDecorators', target, key, descriptor);
   }
   //如果是类的静态方法的话target就是类的构造函数， key方法名 descriptor属性描述符
-  function classMethodDecorator(
-    target: typeof Person,
-    key: string,
-    descriptor: PropertyDescriptor
-  ) {
-    console.log("classMethodDecorator", target, key, descriptor);
+  function classMethodDecorator(target: typeof Person, key: string, descriptor: PropertyDescriptor) {
+    console.log('classMethodDecorator', target, key, descriptor);
   }
   class Person {
     @instancePropertyDecorator
@@ -80,14 +69,10 @@ namespace b {
 namespace d {
   function readonly(target: InstanceType<typeof Circle>, key: string) {
     Object.defineProperty(target, key, {
-      writable: false,
+      writable: false
     });
   }
-  function deprecate(
-    target: InstanceType<typeof Circle>,
-    methodName: string,
-    descriptor: PropertyDescriptor
-  ) {
+  function deprecate(target: InstanceType<typeof Circle>, methodName: string, descriptor: PropertyDescriptor) {
     let oldValue = descriptor.value;
     descriptor.value = function (...arg: any[]) {
       let message = `DEPRECATION ${target.constructor.name}#${methodName}:This function will be removed in future version`;
@@ -101,7 +86,7 @@ namespace d {
     pi: number = 3.14;
     @deprecate
     getName() {
-      console.log("getName");
+      console.log('getName');
     }
   }
   let circle = new Circle();
@@ -109,11 +94,7 @@ namespace d {
   circle.getName();
 }
 function before(beforeFn: Function) {
-  return function (
-    target: InstanceType<typeof App>,
-    methodName: string,
-    descriptor: PropertyDescriptor
-  ) {
+  return function (target: InstanceType<typeof App>, methodName: string, descriptor: PropertyDescriptor) {
     let oldMethod: Function = descriptor.value;
     descriptor.value = function () {
       beforeFn.apply(this, arguments);
@@ -122,11 +103,7 @@ function before(beforeFn: Function) {
   };
 }
 function after(afterFn: Function) {
-  return function (
-    target: InstanceType<typeof App>,
-    methodName: string,
-    descriptor: PropertyDescriptor
-  ) {
+  return function (target: InstanceType<typeof App>, methodName: string, descriptor: PropertyDescriptor) {
     let oldMethod: Function = descriptor.value;
     descriptor.value = function () {
       let result = oldMethod.apply(this, arguments);
@@ -136,16 +113,16 @@ function after(afterFn: Function) {
   };
 }
 class App {
-  @before(() => console.log("before"))
+  @before(() => console.log('before'))
   onClickBefore() {
-    console.log("beforeClick");
+    console.log('beforeClick');
   }
-  @after(() => console.log("after"))
+  @after(() => console.log('after'))
   onClickAfter() {
-    console.log("beforeClick");
+    console.log('beforeClick');
   }
-  @after(() => fetch("/api/report"))
+  @after(() => fetch('/api/report'))
   ajaxClick() {
-    console.log("ajaxClick");
+    console.log('ajaxClick');
   }
 }

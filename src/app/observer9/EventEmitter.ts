@@ -22,12 +22,12 @@ class EventEmitter implements IEventEmitter {
 }
 
 let subject = new EventEmitter();
-subject.on("click", (name: string, age: number) => {
+subject.on('click', (name: string, age: number) => {
   console.log(1, name, age);
 });
-subject.on("click", (name: string, age: number) => {
+subject.on('click', (name: string, age: number) => {
   console.log(2, name, age);
 });
-subject.emit("click", "yanyunchangfeng", 29);
+subject.emit('click', 'yanyunchangfeng', 29);
 
 export {};

@@ -1,4 +1,4 @@
-axios({ url: "http://localhost:8080", method: "GET" }).then(
+axios({ url: 'http://localhost:8080', method: 'GET' }).then(
   (res: any) => console.log(res),
   (err: any) => console.error(err)
 );
@@ -12,7 +12,7 @@ function xhr(config: any) {
         if (request.status === 200) {
           resolve(request.responseText);
         } else {
-          reject("请求失败");
+          reject('请求失败');
         }
       }
     };
@@ -20,27 +20,27 @@ function xhr(config: any) {
   });
 }
 function http(config: any) {
-  let http = require("http");
-  const url = require("url");
+  let http = require('http');
+  const url = require('url');
   let urlObject = url.parse(config.url);
   return new Promise(function (resolve, reject) {
     const options = {
       hostname: urlObject.hostname,
       port: urlObject.port,
       path: urlObject.path,
-      method: config.method,
+      method: config.method
     };
     let req = http.request(options, function (response: any) {
       let chunks: any = [];
-      response.on("data", function (chunk: any) {
+      response.on('data', function (chunk: any) {
         chunks.push(chunk);
       });
-      response.on("end", function () {
+      response.on('end', function () {
         let result = Buffer.concat(chunks).toString();
         resolve(result);
       });
     });
-    req.on("error", function (error: any) {
+    req.on('error', function (error: any) {
       reject(error);
     });
     req.end();
@@ -48,9 +48,9 @@ function http(config: any) {
 }
 function getDefaultAdaptor() {
   let adaptor;
-  if (typeof XMLHttpRequest !== "undefined") {
+  if (typeof XMLHttpRequest !== 'undefined') {
     adaptor = xhr;
-  } else if (typeof process != "undefined") {
+  } else if (typeof process != 'undefined') {
     adaptor = http;
   }
   return adaptor;

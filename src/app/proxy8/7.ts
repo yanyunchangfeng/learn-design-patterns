@@ -5,13 +5,13 @@
  * 反向代理 是外网访问内网
  */
 export {};
-let http = require("http");
-const httpProxy = require("http-proxy");
+let http = require('http');
+const httpProxy = require('http-proxy');
 const proxy = httpProxy.createProxyServer();
 let server = http.createServer(function (req: any, res: any) {
   //跨域代理
   proxy.web(req, res, {
-    target: "http://127.0.0.1:9999",
+    target: 'http://127.0.0.1:9999'
   });
 });
-server.listen(8888, () => console.log("8888"));
+server.listen(8888, () => console.log('8888'));

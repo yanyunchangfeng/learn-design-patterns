@@ -22,7 +22,7 @@ const Callbacks = () => {
   return {
     add,
     remove,
-    fire,
+    fire
   };
 };
 // type returnType = ReturnType<typeof Callbacks>;

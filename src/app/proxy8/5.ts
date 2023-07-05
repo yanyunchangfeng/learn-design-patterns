@@ -33,4 +33,4 @@ console.log(factorial(5)); // 5*4*3*2*1 120
 console.log(factorial(5)); // 5*4*3*2*1 120
 console.log(factorial(5)); // 5*4*3*2*1 120
 console.log(factorial(5)); // 5*4*3*2*1 120
-console.log("count", count); // 25
+console.log('count', count); // 25

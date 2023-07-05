@@ -26,18 +26,18 @@ class UserInfo {
     this.name = name;
   }
   save() {
-    this.storage.save("cf", JSON.stringify(this));
+    this.storage.save('cf', JSON.stringify(this));
   }
   read() {
-    return this.storage.read("cf");
+    return this.storage.read('cf');
   }
 }
 class LocalStorage implements IStorage {
   save(key: string, value: any): void {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
   read(key: string) {
-    throw new Error("Method not implemented.");
+    throw new Error('Method not implemented.');
   }
 }
 let local = new LocalStorage();
@@ -51,8 +51,8 @@ class MysqlStorage implements IStorage {
   }
 }
 let mysqlStorage = new MysqlStorage();
-let userInfo = new UserInfo("cf", local);
-let userInfo2 = new UserInfo("cf", mysqlStorage);
+let userInfo = new UserInfo('cf', local);
+let userInfo2 = new UserInfo('cf', mysqlStorage);
 console.log(userInfo.name);
 
 export {};

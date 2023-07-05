@@ -10,7 +10,7 @@ class Animal {
   name!: string;
   age!: number;
   eat() {
-    console.log("吃东西");
+    console.log('吃东西');
   }
 }
 

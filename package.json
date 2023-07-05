@@ -4,6 +4,11 @@
   "description": "this is design patterns ",
   "main": "index.js",
   "types": "index.d.ts",
+  "engines": {
+    "node": "^14.18.0 || ^16.10.0 || >=18.10.0",
+    "yarn": ">=1.22.4 <2",
+    "npm": "Please use yarn instead of NPM to install dependencies"
+  },
   "typesVersions": {
     ">=4.2": {
       "*": [
@@ -24,8 +29,10 @@
     "start": "cross-env NODE_ENV=development webpack serve",
     "start-analyzer": "cross-env NODE_ENV=development ANALYZE=1  webpack serve",
     "start-unused": "cross-env NODE_ENV=development UNUSED=1  webpack serve",
+    "start-smp": "cross-env NODE_ENV=development SMP=1  webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
     "build-analyzer": "cross-env NODE_ENV=production ANALYZE=1  webpack",
+    "build-smp": "cross-env NODE_ENV=production SMP=1  webpack",
     "generateAnalyzerFile": "cross-env NODE_ENV=production webpack --profile --json > stats.json",
     "analyzer": "webpack-bundle-analyzer --port 8888 ./dist/stats.json",
     "clean": "rimraf ./dist",
@@ -36,9 +43,10 @@
     "build:cjs": "tsc -p tsconfig.build.json -m commonjs --outDir dist/cjs",
     "build-umd-esm-cjs": "npm run clean && npm run build:umd && npm run build:esm && npm run build:cjs",
     "cypress:open": "cypress open",
-    "cypress:run": "concurrently  --kill-others  --success=first \" npm start\" \" wait-on http://localhost:8080 && cypress run\" ",
+    "cypress:run": "concurrently  --kill-others  --success=first \" npm start \" \" wait-on http://localhost:8080 && cypress run \" ",
+    "prettier": "prettier -c --write  **/* --cache",
     "prepare": "husky install",
-    "pre-commit": "cross-env CI=true npm test && npm run cypress:run"
+    "pre-commit": "lint-staged && cross-env CI=true npm test && npm run cypress:run"
   },
   "files": [
     "dist"
@@ -68,7 +76,9 @@
     "http-proxy": "1.18.1",
     "husky": "8.0.3",
     "jest": "29.5.0",
+    "lint-staged": "13.2.3",
     "mini-css-extract-plugin": "2.6.0",
+    "prettier": "2.8.8",
     "sass": "1.49.11",
     "sass-loader": "12.6.0",
     "speed-measure-webpack-plugin": "1.5.0",
@@ -90,5 +100,9 @@
   "dependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "prettier --write --ignore-unknown",
+    "*.{json,less,scss,md}": "prettier --write --ignore-unknown"
   }
 }

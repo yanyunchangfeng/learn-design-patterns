@@ -41,17 +41,17 @@ class Tenant implements ITenant {
   constructor(public agency: Agency, public name: string) {}
   order(type: string) {
     this.agency.subscribe(type, (area: number, money: number) => {
-      console.log(this.name, area + "平", money + "元");
+      console.log(this.name, area + '平', money + '元');
     });
   }
 }
 
 let agency = new Agency();
-let rich = new Tenant(agency, "大款");
-let northFloat = new Tenant(agency, "北漂");
+let rich = new Tenant(agency, '大款');
+let northFloat = new Tenant(agency, '北漂');
 let landLord = new LandLord(agency);
 
-rich.order("豪宅");
-northFloat.order("单间");
-landLord.lend("豪宅", 100000, 1000000);
-landLord.lend("单间", 10, 2000);
+rich.order('豪宅');
+northFloat.order('单间');
+landLord.lend('豪宅', 100000, 1000000);
+landLord.lend('单间', 10, 2000);

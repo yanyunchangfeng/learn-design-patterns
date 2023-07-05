@@ -37,7 +37,7 @@ class Fanta extends AbstractDrink {
 
 class Customer {
   drink(abstractDrink: AbstractDrink) {
-    console.log("花费" + abstractDrink.getPrice());
+    console.log('花费' + abstractDrink.getPrice());
   }
 }
 // 里氏替换 可以替换，任何可以传父类的地方，都可以把子类传进去

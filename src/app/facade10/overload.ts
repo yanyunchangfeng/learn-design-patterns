@@ -6,10 +6,10 @@
 function sum(a: string, b: string): void;
 function sum(a: number, b: number): void;
 function sum(a: string | number, b: string | number) {
-  if (typeof a === "string" && typeof b === "string") {
+  if (typeof a === 'string' && typeof b === 'string') {
     return a + b;
   }
-  if (typeof a === "number" && typeof b === "number") {
+  if (typeof a === 'number' && typeof b === 'number') {
     return a + b;
   }
 }

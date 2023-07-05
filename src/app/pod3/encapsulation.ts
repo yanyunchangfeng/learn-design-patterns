@@ -46,7 +46,7 @@ class Person extends Animal {
   }
 }
 
-let p1 = new Person("cf", 29, 100, 1000);
+let p1 = new Person('cf', 29, 100, 1000);
 p1.name;
 // p1.age; // 子类可以访问 外边不让访问
 // p1.weight; // 子类不能访问 外边不能访问

@@ -13,4 +13,4 @@
 // import "src/app/factory4/abstract";
 // import "src/app/iterator11/5";
 // import "src/app/single5/5";
-import "src/app/adapter6/toTreeAdaptor";
+import 'src/app/adapter6/toTreeAdaptor';

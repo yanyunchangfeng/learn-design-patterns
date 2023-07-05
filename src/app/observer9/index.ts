@@ -23,23 +23,23 @@ abstract class Student {
 
 class Xueba extends Student {
   public update(): void {
-    if (this.teacher.getState() === "提问") {
-      console.log("举手回答");
+    if (this.teacher.getState() === '提问') {
+      console.log('举手回答');
     }
   }
 }
 class Xuezha extends Student {
   public update(): void {
-    if (this.teacher.getState() === "提问") {
-      console.log("低头看脚");
+    if (this.teacher.getState() === '提问') {
+      console.log('低头看脚');
     }
   }
 }
 class Teacher {
   private students: Student[] = [];
-  private state: string = "讲课";
+  private state: string = '讲课';
   public askQuestion() {
-    this.state = "提问";
+    this.state = '提问';
     this.notifyAllStudents();
   }
   getState() {

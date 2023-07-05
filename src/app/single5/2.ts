@@ -2,7 +2,7 @@
 export {};
 function Window() {}
 Window.prototype.hello = function () {
-  console.log("hello");
+  console.log('hello');
 };
 Window.getInstance = (function () {
   let window: Window;

@@ -33,17 +33,17 @@ abstract class Shape {
 
 class Circle extends Shape {
   draw(): void {
-    console.log("绘制圆形");
+    console.log('绘制圆形');
   }
 }
 class Rectangle extends Shape {
   draw(): void {
-    console.log("绘制矩形");
+    console.log('绘制矩形');
   }
 }
 class Star extends Shape {
   draw(): void {
-    console.log("绘制五角星");
+    console.log('绘制五角星');
   }
 }
 
@@ -57,19 +57,19 @@ abstract class ColorfulShape extends Shape {
 class RedColorfulShape extends ColorfulShape {
   draw(): void {
     this.shape.draw();
-    console.log("把边框涂成红色");
+    console.log('把边框涂成红色');
   }
 }
 class GreenColorfulShape extends ColorfulShape {
   draw(): void {
     this.shape.draw();
-    console.log("把边框涂成绿色");
+    console.log('把边框涂成绿色');
   }
 }
 class YellowColorfulShape extends ColorfulShape {
   draw(): void {
     this.shape.draw();
-    console.log("把边框涂成黄色");
+    console.log('把边框涂成黄色');
   }
 }
 // 画一个红色的圆形

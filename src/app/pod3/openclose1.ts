@@ -13,11 +13,11 @@ class Product {
   }
 }
 
-let product = new Product("笔记本电脑", 1000);
-let member = new Customer("member", 0.8);
-let vip = new Customer("vip", 0.6);
-let superVip = new Customer("superVip", 0.4);
-let guest = new Customer("guest");
+let product = new Product('笔记本电脑', 1000);
+let member = new Customer('member', 0.8);
+let vip = new Customer('vip', 0.6);
+let superVip = new Customer('superVip', 0.4);
+let guest = new Customer('guest');
 console.log(product.cost(member));
 console.log(product.cost(vip));
 console.log(product.cost(superVip));

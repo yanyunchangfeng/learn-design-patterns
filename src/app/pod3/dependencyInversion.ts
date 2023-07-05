@@ -12,14 +12,14 @@ class WangSong implements GirlFriend {
   age: number = 30;
   height: number = 170;
   cook() {
-    console.log("红烧鲫鱼");
+    console.log('红烧鲫鱼');
   }
 }
 class BeiWoGirl implements GirlFriend {
   age: number = 22;
   height: number = 165;
   cook() {
-    console.log("炒土豆丝");
+    console.log('炒土豆丝');
   }
 }
 

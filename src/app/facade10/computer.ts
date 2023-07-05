@@ -1,25 +1,25 @@
 class CPU {
   startup() {
-    console.log("open CPU");
+    console.log('open CPU');
   }
   shutdown() {
-    console.log("close CPU");
+    console.log('close CPU');
   }
 }
 class Disk {
   startup() {
-    console.log("open Disk");
+    console.log('open Disk');
   }
   shutdown() {
-    console.log("close Disk");
+    console.log('close Disk');
   }
 }
 class Memory {
   startup() {
-    console.log("open Memory");
+    console.log('open Memory');
   }
   shutdown() {
-    console.log("close Memory");
+    console.log('close Memory');
   }
 }
 

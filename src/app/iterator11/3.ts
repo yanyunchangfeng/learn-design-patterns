@@ -11,10 +11,8 @@ interface Array<T> {
   let that = this as any;
   return {
     next() {
-      return index < that.length
-        ? { value: that[index], done: false }
-        : { value: undefined, done: true };
-    },
+      return index < that.length ? { value: that[index], done: false } : { value: undefined, done: true };
+    }
   };
 };
 let arr2 = [1, 2, 3];
@@ -26,7 +24,7 @@ console.log(it2.next());
 
 //Map Set String arguments NodeList
 
-let str = "abc";
+let str = 'abc';
 let it3 = str[Symbol.iterator]();
 console.log(it3.next());
 console.log(it3.next());
