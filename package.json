@@ -1,6 +1,6 @@
 {
   "name": "learn-design-patterns",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "description": "this is design patterns ",
   "typesVersions": {
     ">=4.2": {
