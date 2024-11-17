@@ -1,3 +1,7 @@
+[![Test Coverage](https://github.com/yanyunchangfeng/learn-design-patterns/actions/workflows/test.yml/badge.svg)](https://github.com/yanyunchangfeng/learn-design-patterns/actions/workflows/test.yml/?query=branch:main) [![codecov](https://codecov.io/gh/yanyunchangfeng/learn-design-patterns/branch/main/graph/badge.svg)](https://codecov.io/gh/yanyunchangfeng/learn-design-patterns) [![Deploy](https://github.com/yanyunchangfeng/learn-design-patterns/workflows/Deploy/badge.svg)](https://github.com/yanyunchangfeng/webpack-ts-template/actions/workflows/deploy.yml)
+
+[![npm latest version](https://img.shields.io/npm/v/learn-design-patterns/latest.svg)](https://www.npmjs.com/package/learn-design-patterns)
+
 <p align="center">
     <img width="300" src="src/assets/img/yanyunchangfeng.png">
 </p>
@@ -37,20 +41,20 @@
 ## 单元测试
 
 ```
-   yarn test or npm run test
+   pnpm test
 ```
 
 ## 端到端测试
 
 ```
-   yarn cypress:open or  npm run cypress:open
-   yarn cypress:run or  npm run cypress:run
+   pnpm run cypress:open
+   pnpm run cypress:run
 ```
 
 ## 打包分析
 
 ```
-   yarn build-analyzer or npm run build-analyzer
+   pnpm run build-analyzer
 ```
 
 ## 社交主页
